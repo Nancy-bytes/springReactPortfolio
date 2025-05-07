@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: fullStackDemo
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/fullStack_db
+    username: root
+    password: nancy1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
+    include-message: always
+
