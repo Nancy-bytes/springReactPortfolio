@@ -14,11 +14,13 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Blog {
+public class Blog extends BaseEntity {
     @Id
-    private int id;
+    private Long id;
     private String title;
-    private String content;
+    private String type;
+    private String summary;
+    private String image;
     private LocalDateTime publishDate;
 
     @ManyToOne

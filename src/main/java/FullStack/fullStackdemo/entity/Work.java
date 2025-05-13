@@ -12,12 +12,16 @@ import lombok.NoArgsConstructor;
 public class Work {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+    @Column
     private String companyName;
-    private String role;
-    private String duration;
+    @Column
+    private String time;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @OneToOne
+    @JoinColumn(name = "address-id")
+    private Address address;
 }

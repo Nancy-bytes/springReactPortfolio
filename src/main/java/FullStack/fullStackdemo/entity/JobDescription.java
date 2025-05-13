@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class JobDescription {
     @Id
-    private String id;
+    private Long id;
     private String description;
     private String jobName;
     private String department;
