@@ -2,11 +2,11 @@ package FullStack.fullStackdemo.exception;
 
 import org.springframework.http.HttpStatus;
 
-public class UserException {
+public class EntityException {
     private final String message;
     private final Throwable throwable;
     private final HttpStatus httpStatus;
-    public UserException(String message, Throwable throwable, HttpStatus httpStatus) {
+    public EntityException(String message, Throwable throwable, HttpStatus httpStatus) {
         this.message = message;
         this.throwable = throwable;
         this.httpStatus = httpStatus;

@@ -1,6 +1,7 @@
 package FullStack.fullStackdemo.service;
 
 import FullStack.fullStackdemo.entity.User;
+import FullStack.fullStackdemo.exception.EntityExceptionNotFound;
 import FullStack.fullStackdemo.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(int id) {
         return userRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+                .orElseThrow(() -> new EntityExceptionNotFound("User not found with id: " + id));
     }
 
     @Override
